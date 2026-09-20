@@ -1,0 +1,11 @@
+.dialoguebox {
+	position: absolute;
+	bottom: 2%;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 5px solid black;
+	box-sizing: border-box;
+	border-radius: 5px;
+	width: 90%;
+	height: 25%;
+}
