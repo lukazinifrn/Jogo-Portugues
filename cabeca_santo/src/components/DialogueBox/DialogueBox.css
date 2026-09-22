@@ -1,5 +1,7 @@
 .dialoguebox {
 	position: absolute;
+	box-sizing: border-box;
+	padding: 2rem 2rem;
 	bottom: 2%;
 	left: 50%;
 	transform: translateX(-50%);
@@ -8,4 +10,5 @@
 	border-radius: 5px;
 	width: 90%;
 	height: 25%;
+	font-size: 1.5rem;
 }

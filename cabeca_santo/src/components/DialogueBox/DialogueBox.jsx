@@ -3,14 +3,18 @@ import { scenes } from "../../data/scene_list";
 import { useState, useEffect } from "react";
 
 export function DialogueBox() {
-	let start = scenes["a.1"];
+	function changeScene(current){
+		setShow("")
+		return current.next[0]
+	}
+	const [current, setCurrent] = useState(scenes["a.1"]);
 	const [show, setShow] = useState("");
 	useEffect(() => {
 		const timers = [];
 
-		for (let i = 0; i < start.text.length; i++) {
+		for (let i = 0; i < current.text.length; i++) {
 			const timer = setTimeout(() => {
-				setShow(prev => prev + start.text[i]);
+				setShow(prev => prev + current.text[i]);
 			}, 100 * i);
 
 			timers.push(timer);
@@ -19,9 +23,9 @@ export function DialogueBox() {
 		return () => {
 			timers.forEach(timer => clearTimeout(timer));
 		};
-	}, [start.text]);
+	}, [current.text]);
 	return (
-		<div className="dialoguebox">{
+		<div onClick={() => {setCurrent(scenes[changeScene(current)])}} className="dialoguebox">{
 			show
 		}</div>
 	);

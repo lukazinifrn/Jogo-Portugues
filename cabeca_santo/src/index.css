@@ -1,4 +1,10 @@
+@font-face {
+	font-family: "DejaVuSans";
+	src: url("./fonts/DejaVuSans.ttf") format("truetype");
+}
+
 * {
 	padding: 0;
 	margin: 0;
+	font-family: "DejaVuSans", sans-serif;
 }
