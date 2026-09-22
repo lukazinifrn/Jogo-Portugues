@@ -3,12 +3,16 @@ import { scenes } from "../../data/scene_list";
 import { useState, useEffect } from "react";
 
 export function DialogueBox() {
-	function changeScene(current){
+	function nextScene(){
 		setShow("")
-		return current.next[0]
+		setCurrent(scenes[current.next[0]])
+	}
+	function setScene(scene){
+		setCurrent(scenes[scene])
 	}
 	const [current, setCurrent] = useState(scenes["a.1"]);
 	const [show, setShow] = useState("");
+
 	useEffect(() => {
 		const timers = [];
 
@@ -25,8 +29,18 @@ export function DialogueBox() {
 		};
 	}, [current.text]);
 	return (
-		<div onClick={() => {setCurrent(scenes[changeScene(current)])}} className="dialoguebox">{
+		current.type == "click"
+		?
+		<div onClick={nextScene} className="dialoguebox">{
 			show
+		}</div>
+		:
+		<div className="dialoguebox">{
+			current.next.map((choice) => {
+				return (
+					<button onClick={() => setScene(choice.next)} key={crypto.randomUUID}>{choice.text}</button>
+				)
+			})
 		}</div>
 	);
 }
