@@ -1,5 +1,6 @@
 import "./DialogueBox.css";
 import { scenes } from "../../data/scene_list";
+import { characters } from "../../data/character_list";
 import { useState, useEffect } from "react";
 import talkSound from "../../sounds/sfx/talk.wav";
 import { backgrounds } from "../../data/background_list";
@@ -13,7 +14,7 @@ export function DialogueBox() {
 	function setScene(scene){
 		setCurrent(scenes[scene])
 	}
-	const [current, setCurrent] = useState(scenes["a.1"]);
+	const [current, setCurrent] = useState(scenes["a.8"]);
 	const [show, setShow] = useState("");
 
 	const sound = new Audio(talkSound)
@@ -44,11 +45,11 @@ export function DialogueBox() {
 			<img src={backgrounds[current.background]}></img>
 			}
 		</div>
-		<div className="character">{current.character != "" && <img src={current.character.images[current.image]}/>}</div>
+		<div className="character">{current.character != "" && <img src={characters[current.character].images[current.image]}/>}</div>
 		{current.type == "click"
 		?
 		<div onClick={nextScene} className="dialoguebox talk">
-			<h1>{current.character.name}</h1>
+			<h1>{current.character != "" && characters[current.character].name}</h1>
 			<p>{show}</p>
 		</div>
 		:

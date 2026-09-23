@@ -3,8 +3,8 @@ import c1 from "../sprites/characters/c1/c1.jpeg";
 import c1_dancando from "../sprites/characters/c1/c1_dancando.jpeg"
 
 export const characters = {
-	"Samuel": new Character("Samuel 1", [c1, c1_dancando]),
-	"Marrinha": new Character("Mariinha", [c1, c1_dancando]),
+	"Samuel": new Character("Samuel", [c1, c1_dancando]),
+	"Mariinha": new Character("Mariinha", [c1, c1_dancando]),
 	"Helenice": new Character("Helenice", [c1, c1_dancando]),
 	"Madeinusa": new Character("Madeinusa 1", [c1, c1_dancando]),
 	"Niceia": new Character("Niceia", [c1, c1_dancando]),

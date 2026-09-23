@@ -1,5 +1,5 @@
 export class Scene {
-	constructor(text, background, type, character, next, time, image = 0,  description = "") {
+	constructor(text, background, type, character, next, time = 1, image = 0,  description = "") {
 		this.text = text
 		this.background = background
 		this.type = type
