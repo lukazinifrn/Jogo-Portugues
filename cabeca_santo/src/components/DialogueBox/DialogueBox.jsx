@@ -2,7 +2,7 @@ import "./DialogueBox.css";
 import { scenes } from "../../data/scene_list";
 import { characters } from "../../data/character_list";
 import { useState, useEffect } from "react";
-import talkSound from "../../sounds/sfx/talk.wav";
+// import talkSound from "../../sounds/sfx/talk.wav";
 import { backgrounds } from "../../data/background_list";
 
 
@@ -14,10 +14,10 @@ export function DialogueBox() {
 	function setScene(scene){
 		setCurrent(scenes[scene])
 	}
-	const [current, setCurrent] = useState(scenes["a.8"]);
+	const [current, setCurrent] = useState(scenes["a.24"]);
 	const [show, setShow] = useState("");
 
-	const sound = new Audio(talkSound)
+	// const sound = new Audio(talkSound)
 
 	useEffect(() => {
 		const timers = [];
@@ -25,8 +25,8 @@ export function DialogueBox() {
 		for (let i = 0; i < current.text.length; i++) {
 			const timer = setTimeout(() => {
 				setShow(prev => prev + current.text[i]);
-				sound.currentTime = 0
-				sound.play()
+				// sound.currentTime = 0
+				// sound.play()
 			}, (current.time*1000/current.text.length)*i);
 
 			timers.push(timer);
