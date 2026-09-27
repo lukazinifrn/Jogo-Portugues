@@ -5,7 +5,9 @@ import c1_dancando from "../sprites/characters/c1/c1_dancando.jpeg"
 export const characters = {
 	"Samuel": new Character("Samuel", [c1, c1_dancando]),
 	"Mariinha": new Character("Mariinha", [c1, c1_dancando]),
+	"Caminhoneiro": new Character("Caminhoneiro", [c1, c1_dancando]),
 	"Helenice": new Character("Helenice", [c1, c1_dancando]),
+	"?Madeinusa": new Character("???", [c1, c1_dancando]),
 	"Madeinusa": new Character("Madeinusa 1", [c1, c1_dancando]),
 	"Niceia": new Character("Niceia", [c1, c1_dancando]),
 	"Francisco": new Character("Francisco", [c1, c1_dancando]),
@@ -14,7 +16,8 @@ export const characters = {
 	"Enfermeira": new Character("Enfermeira", [c1, c1_dancando]),
 	"Dr.Adriano": new Character("Dr.Adriano 1", [c1, c1_dancando]),
 	"Aécio": new Character("Aécio Diniz", [c1, c1_dancando]),
-	"Roberta": new Character("Roberta", [c1, c1_dancando]),
+	"Rosa": new Character("Rosa", [c1, c1_dancando]),
+	"?Rosa": new Character("???", [c1, c1_dancando]),
 	"Julieta": new Character("Julieta", [c1, c1_dancando]),
-	"Angela": new Character("Angela", [c1, c1_dancando])
+	"Angela": new Character("Angela", [c1, c1_dancando]),
 }
