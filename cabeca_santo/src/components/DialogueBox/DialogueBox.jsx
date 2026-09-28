@@ -14,7 +14,7 @@ export function DialogueBox() {
 	function setScene(scene) {
 		setCurrent(scenes[scene])
 	}
-	const [current, setCurrent] = useState(scenes["a.119.b.16"]);
+	const [current, setCurrent] = useState(scenes["a.141"]);
 	const [show, setShow] = useState("");
 
 	// const sound = new Audio(talkSound)
