@@ -11,6 +11,7 @@ export const characters = {
 	"Madeinusa": new Character("Madeinusa 1", [c1, c1_dancando]),
 	"Niceia": new Character("Niceia", [c1, c1_dancando]),
 	"Francisco": new Character("Francisco", [c1, c1_dancando]),
+	"?Francisco": new Character("???", [c1, c1_dancando]),
 	"Manoel": new Character("Manoel", [c1, c1_dancando]),
 	"Chico": new Character("Chico Coveiro", [c1, c1_dancando]),
 	"Enfermeira": new Character("Enfermeira", [c1, c1_dancando]),
