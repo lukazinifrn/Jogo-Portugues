@@ -147,11 +147,11 @@ export const scenes = {
     "a.118": new Scene("Na verdade, foram 16 dias.", "b1", "click", "Niceia", ["a.119"]),
     "a.119": new Scene("", "b1", "choice", "", [new Choice("...", "a.120"), new Choice("Como a senhora sabe dessas coisas?", "a.119.a.1"), new Choice("E seu filho?", "a.119.b.1")]),
 
-    // Variação 1
+    // Variação a
     "a.119.a.1": new Scene("Eu sei.", "b1", "click", "Niceia", ["a.119.a.2"]),
     "a.119.a.2": new Scene("Como?", "b1", "click", "Samuel", ["a.120"]),
 
-    // Variação 2
+    // Variação b
     "a.119.b.1": new Scene("Fala do meu Manoel?", "b1", "click", "Niceia", ["a.119.b.2"]),
     "a.119.b.2": new Scene("Isso, seu filho.", "b1", "click", "Samuel", ["a.119.b.3"]),
     "a.119.b.3": new Scene("E seu pai.", "b1", "click", "Niceia", ["a.119.b.4"]),
@@ -401,7 +401,7 @@ export const scenes = {
     "a.287": new Scene("Agilizou as consultas o máximo que pôde, doido para escapar dali.", "b1", "click", "", ["a.288"]),
     "a.288": new Scene("Até que...", "b1", "click", "", ["a.289"]),
     "a.289": new Scene("...", "b1", "click", "Madeinusa", ["a.290"]),
-    "a.290": new Scene("...", "b1", "click", "Adriano", ["a.291"]),
+    "a.290": new Scene("....", "b1", "click", "Adriano", ["a.291"]),
     "a.291": new Scene("Eram dois tímidos.", "b1", "click", "", ["a.292"]),
     "a.292": new Scene("Então, o que você tem?", "b1", "click", "Adriano", ["a.293"]),
     "a.293": new Scene("Madeinusa estende a meia do doutor.", "b1", "click", "", ["a.294"]),
@@ -414,4 +414,24 @@ export const scenes = {
     "a.300": new Scene("A sentença foi clara, o doutor devia se casar com Madeinusa.", "", "click", "", ["a.301"]),
     "a.301": new Scene("Ou era melhor vê-la morta.", "", "click", "", ["a.302"]),
     "a.302": new Scene("E assim, os preparativos para o casamento começaram.", "", "click", "", ["a.303"]),
+    "a.303": new Scene("...", "", "click", "", ["a.304"]),
+    "a.304": new Scene("A notícia do milagre de Santo Antônio se espalhou rapidamente.", "b1", "click", "", ["a.305"]),
+    //"a.": new Scene("", "", "click", "", ["a."]),
+    "a.305": new Scene("Não demorou para que isso chegasse ao ouvidos de Aécio Diniz, locutor da rádio 89.1 Candeia AM.", "b1", "click", "", ["a.306"]),
+    "a.306": new Scene("Ele fez questão de chamá-la para o seu programa.", "b1", "click", "", ["a.307"]),
+    "a.307": new Scene("Samuel, Samuel!", "b1", "click", "Francisco", ["a.308"]),
+    "a.308": new Scene("Que é, Francisco?", "b1", "click", "Samuel", ["a.309"]),
+    "a.309": new Scene("Madeinusa está agora na rádio dando estrevista.", "b1", "click", "Francisco", ["a.310"]),
+    "a.310": new Scene("Você não quer ver? Tenho um rádio aqui.", "b1", "click", "Francisco", ["a.311"]),
+    "a.311": new Scene("", "b1", "choice", "", [new Choice("Ver a entrevista", "a.311.a.1"), new Choice("Não ver a entrevista", "a.311.b.1")]),
+
+    // Variação a
+    "a.311.a.1": new Scene("...", "", "click", "", ["a.311.a.2"]),
+    "a.311.a.2": new Scene("Boa tarde a todos!", "b1", "click", "Aecio", ["a.311.a.3"]),
+    "a.311.a.3": new Scene('Me chamo Aécio Diniz e você está no programa "Noiva da Semana".', "b1", "click", "Aecio", ["a.311.a.4"]),
+    "a.311.a.4": new Scene("Como convidada de hoje, temos aquela que foi abençoada por Santo Antônio.", "b1", "click", "Aecio", ["a.311.a.5"]),
+    "a.311.a.5": new Scene("Madeinusa!", "b1", "click", "Aecio", ["a.311.a.6"]),
+    "a.311.a.6": new Scene("Olá! Boa tarde!", "b1", "click", "Madeinusa", ["a.311.a.7"]),
+    "a.311.a.7": new Scene("Seja bem vinda, viu?", "b1", "click", "Aecio", ["a.311.a.8"]),
+    "a.311.a.8": new Scene("Então, conta para a gente como esse milagre aconteceu.", "b1", "click", "Aecio", ["a.311.a.9"]),
 }

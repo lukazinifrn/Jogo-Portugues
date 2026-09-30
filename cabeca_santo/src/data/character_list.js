@@ -18,7 +18,7 @@ export const characters = {
 	"Chico": new Character("Chico Coveiro", [c1, c1_dancando]),
 	"Enfermeira": new Character("Enfermeira", [c1, c1_dancando]),
 	"Adriano": new Character("Adriano", [c1, c1_dancando]),
-	"Aécio": new Character("Aécio Diniz", [c1, c1_dancando]),
+	"Aecio": new Character("Aécio Diniz", [c1, c1_dancando]),
 	"Rosa": new Character("Rosa", [c1, c1_dancando]),
 	"?Rosa": new Character("???", [c1, c1_dancando]),
 	"Julieta": new Character("Julieta", [c1, c1_dancando]),
