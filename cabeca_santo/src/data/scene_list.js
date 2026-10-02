@@ -441,15 +441,15 @@ export const scenes = {
     "a.311.a.14": new Scene("E ela conta tudo...", "b1", "click", "", ["a.311.a.15"]),
     "a.311.a.15": new Scene("E o programa nunca teve tanta audiência como hoje...", "b1", "click", "", ["a.311.a.16"]),
     "a.311.a.16": new Scene("...", "", "click", "", ["a.311.a.17"]),
-    "a.311.a.17": new Scene("Eu nem sabia que ia ser o padrinho.", "b1", "click", "Samuel", ["a.311.a.18"]),
-    "a.311.a.18": new Scene("Francisco cai na gargalhada.", "b1", "click", "", ["a.311.a.19"]),
-    "a.311.a.19": new Scene("Vamos ter que arranjar uma roupas para você, não vai assim para um casamento.", "b1", "click", "Francisco", ["a.311.a.20"]),
-    "a.311.a.20": new Scene("", "b1", "choice", "", [new Choice("Ir ao casamento", "a.312"), new Choice("Não ir ao casamento", "d.1")]),
+    "a.311.a.17": new Scene("Eu nem sabia que ia ser o padrinho.", "b1", "click", "Samuel", ["a.312"]),
+    "a.312": new Scene("Francisco cai na gargalhada.", "b1", "click", "", ["a.313"]),
+    "a.313": new Scene("Vamos ter que arranjar uma roupas para você, não vai assim para um casamento.", "b1", "click", "Francisco", ["a.314"]),
+    "a.314": new Scene("", "b1", "choice", "", [new Choice("Ir ao casamento", "a.315"), new Choice("Não ir ao casamento", "d.1")]),
 
     // Final 3, 4 e 5
     "d.1": new Scene("Não quero ir ao casamento.", "b1", "click", "Samuel", ["d.2"]),
     "d.2": new Scene("Por quê?", "b1", "click", "Samuel", ["d.3"]),
-    "d.3": new Scene("", "b1", "choice", "", [new Choice("Ceder e ir.", "a.312"), new Choice("Cumprir a promessa.", "d.4")]),
+    "d.3": new Scene("", "b1", "choice", "", [new Choice("Ceder e ir.", "a.315"), new Choice("Cumprir a promessa.", "d.4")]),
     "d.4": new Scene("Eu preciso cumprir a promessa que fiz a minha logo.", "b1", "click", "Samuel", ["d.5"]),
     "d.5": new Scene("Não tenho tempo aqui a perder nessa cidade.", "b1", "click", "Samuel", ["d.6"]),
     "d.6": new Scene("Então porque você ajudou Madeinusa?", "b1", "click", "Francisco", ["d.7"]),
@@ -522,5 +522,11 @@ export const scenes = {
     "d.22": new Scene("Samuel só ignora a voz e ascende a vela nos pés do corpo do santo Antõnio.", "b1", "click", "", ["d.23"]),
     "d.23": new Scene("Para, em seguida ele sair de Candeia da mesma forma que veio, caminhando, se dirigindo a Canindé, para ascender a vela no pé de São Francisco.", "b1", "click", "", ["F.5"], 1.5),
     "F.5": new Scene("Final 5 - Promessa", "", "final", "", [], 0, 0, "Samuel ascendeu a vela a santo Antônio, cumprindo uma das promessas feita à mãe, apesar de não ter encontrado seu pai."),
-    
+
+    // Variação b
+    "a.311.b.1": new Scene("Não quero ver a entrevista.", "b1", "click", "Samuel", ["a.311.b.2"]),
+    "a.311.b.2": new Scene("Tudo bem, eu vou ouvir aqui sozinho.", "b1", "click", "Francisco", ["a.311.b.3"]),
+    "a.311.b.3": new Scene("Após um tempo...", "b1", "click", "", ["a.311.b.4"]),
+    "a.311.b.4": new Scene("Ei, Samuel, Madeinusa disse que você vai ser o padrinho do casamento dela.", "b1", "click", "Francisco", ["a.311.b.5"]),
+    "a.311.b.5": new Scene("O quê? Ela nem me avisou.", "b1", "click", "Samuel", ["a.312"]),
 }
