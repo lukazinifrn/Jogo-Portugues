@@ -7,6 +7,11 @@ import { backgrounds } from "../../data/background_list";
 
 
 export function DialogueBox() {
+	function handleKeyDown(event){
+		if (current.type === "click" && (event.key === "Enter" || event.key === " ")){
+			nextScene()
+		}
+	}
 	function nextScene() {
 		setShow("")
 		setCurrent(scenes[current.next[0]])
@@ -32,11 +37,13 @@ export function DialogueBox() {
 			timers.push(timer);
 		}
 
+		window.addEventListener("keydown", handleKeyDown)
 		return () => {
 			timers.forEach(timer => clearTimeout(timer));
+			window.removeEventListener("keydown", handleKeyDown)
 		};
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [current.text]);
+	}, [current.text, current]);
 	return (
 		<>
 			<div className="background">
