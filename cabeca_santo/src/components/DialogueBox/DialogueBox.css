@@ -1,3 +1,19 @@
+button{
+	border: none;
+	background-color: white;
+	outline: 2px solid black;
+	border-radius: 5px;
+	height: 3rem;
+	width: 15rem;
+	transition-property: background-color, color;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+}
+button:hover{
+	background-color: black;
+	color: white;
+}
+
 .dialoguebox {
 	position: absolute;
 	box-sizing: border-box;
@@ -50,22 +66,6 @@
 	align-items: center;
 	justify-content: center;
 	gap: 1rem;
-
-	button{
-		border: none;
-		background-color: white;
-		outline: 2px solid black;
-		border-radius: 5px;
-		height: 3rem;
-		width: 15rem;
-		transition-property: background-color, color;
-		transition-duration: 0.3s;
-		transition-timing-function: ease-in-out;
-	}
-	button:hover{
-		background-color: black;
-		color: white;
-	}
 }
 
 .final{
@@ -89,5 +89,11 @@
 	}
 	p{
 		font-size: 1.6rem;
+	}
+	.final-options{
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		
 	}
 }

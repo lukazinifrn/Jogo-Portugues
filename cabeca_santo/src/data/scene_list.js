@@ -11,7 +11,7 @@ export const scenes = {
     "a.4": new Scene("Minha mãe vem me buscar.", "b1", "click", "Mariinha", ["a.5"]),
     "a.5": new Scene("Não fala essas coisas, mãe...", "b1", "click", "Samuel", ["a.6"]),
     "a.6": new Scene("Samuel, me escute, eu quero que você faça algo para mim...", "b1", "click", "Mariinha", ["a.7"]),
-    "a.7": new Scene("", "b1", "choice", "Mariinha", [new Choice("Sim, mãe Mariinha", "a.8"), new Choice("Me desculpe, mãe Mariinha...", "b.1")], 1),
+    "a.7": new Scene("", "b1", "choice", "Mariinha", [new Choice("Sim, mãe Mariinha", "a.8"), new Choice("Me desculpe, mãe Mariinha...", "b.1", "a.6")], 1),
 
     // Final 1 (Tormento)
     "b.1": new Scene("Está tudo bem, meu filho...", "b1", "click", "Mariinha", ["b.2"]),
@@ -167,7 +167,7 @@ export const scenes = {
     "a.119.b.13": new Scene("Ele mora aqui?", "niceia", "click", "Samuel", ["a.119.b.14"]),
     "a.119.b.14": new Scene("Nem tente entrar.", "niceia", "click", "Niceia", ["a.119.b.15"]),
     "a.119.b.15": new Scene("Ela assumiu um rosto enraivecido.", "niceia", "click", "", ["a.119.b.16"]),
-    "a.119.b.16": new Scene("", "niceia", "choice", "", [new Choice("Só aceitar", "a.120"), new Choice("Forçar entrada", "c.1")]),
+    "a.119.b.16": new Scene("", "niceia", "choice", "", [new Choice("Só aceitar", "a.120"), new Choice("Forçar entrada", "c.1", "a.116")]),
 
     // Final 2 (Chuva)
     "c.1": new Scene("Samuel decide entrar na casa de qualquer jeito.", "niceia", "click", "", ["c.2"]),
@@ -444,7 +444,7 @@ export const scenes = {
     "a.311.a.17": new Scene("Eu nem sabia que ia ser o padrinho.", "b1", "click", "Samuel", ["a.312"]),
     "a.312": new Scene("Francisco cai na gargalhada.", "b1", "click", "", ["a.313"]),
     "a.313": new Scene("Vamos ter que arranjar uma roupas para você, não vai assim para um casamento.", "b1", "click", "Francisco", ["a.314"]),
-    "a.314": new Scene("", "b1", "choice", "", [new Choice("Ir ao casamento", "a.315"), new Choice("Não ir ao casamento", "d.1")]),
+    "a.314": new Scene("", "b1", "choice", "", [new Choice("Ir ao casamento", "a.315"), new Choice("Não ir ao casamento", "d.1", "a.312")]),
 
     // Final 3, 4 e 5
     "d.1": new Scene("Não quero ir ao casamento.", "b1", "click", "Samuel", ["d.2"]),
@@ -585,7 +585,7 @@ export const scenes = {
     "a.349": new Scene("E agora, ele quer se vingar de você.", "b1", "click", "Chico", ["a.350"]),
     "a.350": new Scene("E o que eu faço agora?", "b1", "click", "Samuel", ["a.351"]),
     "a.351": new Scene("Você precisa ir para bem longe daqui.", "b1", "click", "Chico", ["a.352"]),
-    "a.352": new Scene("", "b1", "choice", "", [new Choice("Ir embora", "g.1"), new Choice("Ficar", "a.353")]),
+    "a.352": new Scene("", "b1", "choice", "", [new Choice("Ir embora", "g.1", "a.350"), new Choice("Ficar", "a.353")]),
     
     // Final 6
     "g.1": new Scene("Tá, eu vou embora... já devia ter ido mesmo.", "b1", "click", "Samuel", ["g.2"]),
@@ -658,7 +658,7 @@ export const scenes = {
     "a.408": new Scene("Mas por sua causa, agora ela está viva de novo, com casas reformadas e muitos turistas.", "b1", "click", "Osorio", ["a.409"]),
     "a.409": new Scene("Eu vou acabar com tudo isso, com essa cabeça de santo maldita.", "b1", "click", "Osorio", ["a.410"]),
     "a.410": new Scene("E se você não ir embora dessa cidade, eu terei que acabar com você também...", "b1", "click", "Osorio", ["a.411"], 2),
-    "a.411": new Scene("", "b1", "choice", "", [new Choice("Colaborar", "a.412"), new Choice("Enfrentar o prefeito", "h.1")]),
+    "a.411": new Scene("", "b1", "choice", "", [new Choice("Colaborar", "a.412"), new Choice("Enfrentar o prefeito", "h.1", "a.409")]),
 
     // Final 7 e 8
     "h.1": new Scene("Não, você não vai fazer isso com a cidade! Você não pode acabar com a cabeça... porque...", "b1", "click", "Samuel", ["h.2"]),

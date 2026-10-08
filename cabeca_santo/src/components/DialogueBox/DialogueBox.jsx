@@ -21,6 +21,7 @@ export function DialogueBox() {
 	}
 	const [current, setCurrent] = useState(scenes["a.1"]);
 	const [show, setShow] = useState("");
+	const [checkpoint, setCheckpoint] = useState("a.1");
 
 	// const sound = new Audio(talkSound)
 
@@ -65,7 +66,12 @@ export function DialogueBox() {
 					<div className="dialoguebox choice">{
 						current.next.map((choice) => {
 							return (
-								<button onClick={() => setScene(choice.next)} key={choice.next}>{choice.text}</button>
+								<button onClick={() => {
+									setScene(choice.next)
+									if (choice.checkpoint != ""){
+										setCheckpoint(choice.checkpoint)
+									}
+								}} key={choice.next}>{choice.text}</button>
 							)
 						})
 					}</div>
@@ -73,6 +79,24 @@ export function DialogueBox() {
 					<div className="final">
 						<h1>{current.text}</h1>
 						<p>{current.description}</p>
+						<div className="final-options">
+							{checkpoint != "a.1"
+							?
+							<button onClick={
+								() => {
+									setShow("")
+									setScene(checkpoint)
+								}}>Voltar para última escolha</button>
+							:
+							<span></span>
+							}
+							<button onClick={
+								() => {
+									setShow("")
+									setCheckpoint("a.1")
+									setScene("a.1")
+								}}>Voltar para o início</button>
+						</div>
 					</div>}
 		</>
 	);
