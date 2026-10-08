@@ -1,52 +1,60 @@
-button{
+button {
 	border: none;
 	background-color: white;
 	outline: 2px solid black;
 	border-radius: 5px;
-	height: 3rem;
-	width: 15rem;
-	transition-property: background-color, color;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	height: clamp(2.5rem, 6vh, 3rem);
+	width: clamp(10rem, 30vw, 15rem);
+	font-size: clamp(0.9rem, 1.5vw, 1rem);
+	transition:
+		background-color 0.3s ease-in-out,
+		color 0.3s ease-in-out;
 }
-button:hover{
+
+button:hover {
 	background-color: black;
 	color: white;
 }
 
+
 .dialoguebox {
 	position: absolute;
 	box-sizing: border-box;
-	padding: 1rem 1rem;
+	padding: clamp(0.6rem, 2vw, 1rem);
 	bottom: 2%;
 	left: 50%;
 	transform: translateX(-50%);
-	border: 5px solid black;
-	box-sizing: border-box;
+	border: clamp(3px, 0.4vw, 5px) solid black;
 	border-radius: 5px;
 	width: 90%;
 	height: 25%;
-	font-size: 1.5rem;
+	font-size: clamp(1rem, 2vw, 1.5rem);
 	z-index: 100;
 	background-color: white;
-	
-	h1{
-		font-size: 1.6rem;
-	}
 }
 
-.talk{
+.dialoguebox h1 {
+	font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+	margin-top: 0;
+}
+
+.talk {
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
+	gap: clamp(0.5rem, 1.5vw, 1rem);
 }
 
-.character{
+
+.character {
 	position: absolute;
 	left: 25%;
 	bottom: 4%;
 	z-index: 75;
+	max-width: 50vw;
+	max-height: 70vh;
 }
+
+
 
 .background {
 	background-color: black;
@@ -56,19 +64,24 @@ button:hover{
 	left: 0;
 	z-index: 1;
 	transform: translateY(-50%);
-	img{
-		width: 100%;
-	}
 }
 
-.choice{
+.background img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+
+.choice {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 1rem;
+	gap: clamp(0.5rem, 2vw, 1rem);
+	flex-wrap: wrap;
 }
 
-.final{
+.final {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -80,20 +93,51 @@ button:hover{
 	background-color: black;
 	color: white;
 	box-sizing: border-box;
-	padding: 5rem;
-	gap: 2rem;
+	padding: clamp(2rem, 8vw, 5rem);
+	gap: clamp(1rem, 3vw, 2rem);
 	z-index: 50;
+	overflow-y: auto;
+}
 
-	h1{
-		font-size: 5rem;
-	}
-	p{
-		font-size: 1.6rem;
-	}
-	.final-options{
+.final h1 {
+	font-size: clamp(2rem, 7vw, 5rem);
+	text-align: center;
+}
+
+.final p {
+	font-size: clamp(1rem, 2.5vw, 1.6rem);
+	text-align: center;
+}
+
+.final-options {
+	display: flex;
+	flex-direction: column;
+	gap: clamp(0.5rem, 1.5vw, 1rem);
+	width: min(100%, 15rem);
+}
+
+
+.portrait-warning {
+	display: none;
+}
+
+@media (orientation: portrait) {
+	.portrait-warning {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
 		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-		
+		align-items: center;
+		justify-content: center;
+		background-color: black;
+		color: white;
+		font-size: clamp(1.5rem, 8vw, 3rem);
+		text-align: center;
+		padding: 2rem;
+		box-sizing: border-box;
+		z-index: 1000;
 	}
+
 }

@@ -47,6 +47,7 @@ export function DialogueBox() {
 	}, [current.text, current]);
 	return (
 		<>
+			<p className="portrait-warning">Gire seu dispositivo para ficar em modo paisagem, ou largura miníma inadequada.</p>
 			<div className="background">
 				{current.background != ""
 					&&
