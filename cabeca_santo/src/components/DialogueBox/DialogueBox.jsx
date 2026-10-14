@@ -19,7 +19,7 @@ export function DialogueBox() {
 	function setScene(scene) {
 		setCurrent(scenes[scene])
 	}
-	const [current, setCurrent] = useState(scenes["a.487"]);
+	const [current, setCurrent] = useState(scenes["a.1"]);
 	const [show, setShow] = useState("");
 	const [checkpoint, setCheckpoint] = useState("a.1");
 
