@@ -105,7 +105,7 @@ export function DialogueBox() {
 			audio.pause();
 		};
 	}
-	const [current, setCurrent] = useState(scenes["a.1"]);
+	const [current, setCurrent] = useState(scenes["a.493"]);
 	const [show, setShow] = useState("");
 	const [checkpoint, setCheckpoint] = useState("a.1");
 

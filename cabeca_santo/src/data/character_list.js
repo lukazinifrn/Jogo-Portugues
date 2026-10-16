@@ -1,6 +1,4 @@
 import { Character } from "../classes/character";
-import c1 from "../sprites/characters/c1/c1.jpeg";
-import c1_dancando from "../sprites/characters/c1/c1_dancando.jpeg"
 
 // Samuel
 import samuel_1_bravo from "../sprites/characters/Samuel/samuel_1_bravo.png";
@@ -43,6 +41,14 @@ import francisco_feliz from "../sprites/characters/Francisco/francisco_feliz.png
 import francisco_assustado from "../sprites/characters/Francisco/francisco_assustado.png";
 import francisco_triste from "../sprites/characters/Francisco/francisco_triste.png";
 
+// Ivanísia
+import ivanisia_bravo from "../sprites/characters/Ivanisia/ivanisia_bravo.png";
+import ivanisia_base from "../sprites/characters/Ivanisia/ivanisia_base.png";
+
+// Manoel
+import manoel_assustado from "../sprites/characters/Manoel/manoel_assustado.png";
+import manoel_base from "../sprites/characters/Manoel/manoel_base.png";
+
 // Chico
 import chico from "../sprites/characters/Chico/chico_meme.png";
 
@@ -66,6 +72,10 @@ import aecio_triste from "../sprites/characters/Aecio/aecio_triste.png";
 import rosa_bravo from "../sprites/characters/Rosa/rosa_bravo.png";
 import rosa_base from "../sprites/characters/Rosa/rosa_base.png";
 
+// Osório
+import osorio_assustado from "../sprites/characters/Osorio/osorio_assustado.png";
+import osorio_base from "../sprites/characters/Osorio/osorio_base.png";
+
 // Crianca
 import crianca_bravo from "../sprites/characters/Crianca/crianca_bravo.png";
 import crianca_feliz from "../sprites/characters/Crianca/crianca_feliz.png";
@@ -75,6 +85,10 @@ import crianca_triste from "../sprites/characters/Crianca/crianca_triste.png";
 import jose_bravo from "../sprites/characters/Jose/jose_bravo.png";
 import jose_base from "../sprites/characters/Jose/jose_base.png";
 import jose_triste from "../sprites/characters/Jose/jose_triste.png";
+
+// Rosário
+import rosario_assustado from "../sprites/characters/Rosario/rosario_assustado.png";
+import rosario_base from "../sprites/characters/Rosario/rosario_base.png";
 
 export const characters = {
 	"Samuel": new Character("Samuel", [samuel_1_bravo, samuel_1_triste, samuel_1_assustado, samuel_2_bravo, samuel_2_assustado, samuel_2_triste]),
@@ -86,20 +100,20 @@ export const characters = {
 	"Niceia": new Character("Niceia", [niceia_feliz, niceia_triste, niceia_bravo, niceia_assustado]),
 	"Francisco": new Character("Francisco", [francisco_feliz, francisco_assustado, francisco_bravo, francisco_triste]),
 	"?Francisco": new Character("???", [francisco_feliz, francisco_assustado, francisco_bravo, francisco_triste]),
-	"Ivanisia": new Character("Ivanísia", [c1, c1_dancando]),
-	"?Ivanisia": new Character("???", [c1, c1_dancando]),
-	"?Manoel": new Character("???", [c1, c1_dancando]),
-	"Manoel": new Character("Manoel", [c1, c1_dancando]),
+	"Ivanisia": new Character("Ivanísia", [ivanisia_base, ivanisia_bravo]),
+	"?Ivanisia": new Character("???", [ivanisia_base, ivanisia_bravo]),
+	"?Manoel": new Character("???", [manoel_base, manoel_assustado]),
+	"Manoel": new Character("Manoel", [manoel_base, manoel_assustado]),
 	"Chico": new Character("Chico Coveiro", [chico]),
 	"Adriano": new Character("Adriano", [adriano_1_base, adriano_1_assustado, adriano_1_bravo, adriano_1_feliz, adriano_1_triste, adriano_2_assustado, adriano_2_bravo, adriano_2_feliz, adriano_2_triste]),
 	"Aecio": new Character("Aécio Diniz", [aecio_base, aecio_assustado, aecio_triste]),
 	"Rosa": new Character("Rosa", [rosa_base, rosa_bravo]),
 	"?Rosa": new Character("???", [rosa_base, rosa_bravo]),
-	"Osorio": new Character("Osório", [c1, c1_dancando]),
-	"?Osorio": new Character("???", [c1, c1_dancando]),
+	"Osorio": new Character("Osório", [osorio_base, osorio_assustado]),
+	"?Osorio": new Character("???", [osorio_base, osorio_assustado]),
 	"Crianca": new Character("Crianca", [crianca_feliz, crianca_bravo, crianca_triste]),
 	"Jose": new Character("Francisco José", [jose_base, jose_bravo, jose_triste]),
 	"?Jose": new Character("???", [jose_base, jose_bravo, jose_triste]),
-	"Rosario": new Character("Rosário", [c1, c1_dancando]),
-	"?Rosario": new Character("???", [c1, c1_dancando]),
+	"Rosario": new Character("Rosário", [rosario_base, rosario_assustado]),
+	"?Rosario": new Character("???", [rosario_base, rosario_assustado]),
 }
